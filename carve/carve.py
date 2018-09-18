@@ -40,7 +40,7 @@ def remove(f):
 
 def flow(*args):
     return lambda k, v, p: reduce(
-        lambda tup, f: (*f(tup[0], tup[1], tup[2]), tup[2]), args, (k, v, p)
+        lambda tup, f: f(tup[0], tup[1], tup[2]) + (tup[2],), args, (k, v, p)
     )[0:2]
 
 
