@@ -6,5 +6,5 @@ ver = re.match(".* to (.*)\\\\.*$", str(p)).group(1)
 open("carve/__version__.py", "w").write('__version__ = "{}"'.format(ver))
 print("git tag v{}".format(ver))
 print(subprocess.check_call("git tag v{}".format(ver), shell=True))
-print("now run poetry publish, git push --tags")
+print("now run poetry publish --build, git push --tags")
 
