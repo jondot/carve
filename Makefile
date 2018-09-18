@@ -3,4 +3,4 @@ watch:
 test:
 	tox
 release:
-	ci/release.py
+	python ci/release.py
